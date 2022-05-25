@@ -18,8 +18,8 @@ void updateCounter() {
     instance->_rev_counter++;
   }
   instance->_start_time = micros();
-  Serial.println(instance->_pulse_counter);
-  Serial.println(instance->_pps);
+  // Serial.println(instance->_pulse_counter);
+  // Serial.println(instance->_pps);
 }
 
 ENCODER::ENCODER() { instance = this; }

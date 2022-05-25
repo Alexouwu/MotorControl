@@ -14,7 +14,7 @@ private:
     double  _pps, _angular_velocity;
     bool direction;
 public:
-    ENCODER(/* args */);
+    ENCODER();
     ~ENCODER();
     void setup(int ppr, int pins[2]);
     double getVelocityPps();
