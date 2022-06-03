@@ -14,12 +14,13 @@ void PID::setup(int kp, int ki, int kd){
     _kd = kd;
 }
 
-void PID::setReference(int reference){
+void PID::setReference(float reference){
     _reference = reference;
     _error_integral = 0;
 }
 
-float PID::control(float input){
+float PID::control(float input, float reference){
+    _reference = reference;
     float error = _reference - input;
     float _error_diff = error - _error_previous;
     _error_integral += error;
