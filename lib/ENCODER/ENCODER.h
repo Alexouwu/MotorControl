@@ -9,7 +9,8 @@ class ENCODER
 {
 private:
     /* data */
-    int _ppr, _pins[2], _pulse_counter=0, _rev_counter=0, _degrees_pp;
+    int _ppr, _pins[2], _pulse_counter=0, _rev_counter=0, _degrees_pp, _vel_counter=0, _dt = 50000, _last_pulse_count = 0;
+    int _position=0;
     unsigned long _start_time = micros();
     double  _pps, _angular_velocity;
     bool direction;

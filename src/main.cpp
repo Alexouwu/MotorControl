@@ -3,9 +3,10 @@
 
 ENCODER encoder;
 int pins[] = {25, 27};
-double start_time, dt = 200;
+double start_time, dt = 100;
 bool flag = true;
 int ppr = 11;
+int initial_pulses = 0;
 
 void setup() {
   // put your setup code here, to run once:
@@ -19,14 +20,6 @@ void setup() {
 void loop() {
   // Serial.println("EKISDEEEEE");
   if (millis() - start_time > dt) {
-    if (flag) {
-      digitalWrite(26, HIGH);
-      flag = false;
-      start_time = millis();
-    } else {
-      digitalWrite(26, LOW);
-      flag = true;
-      start_time = millis();
-    }
+    
   }
 }
